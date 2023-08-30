@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>E-commerce App</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        h4 {
+            background-color: #f8f9fa;
+            padding: 10px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        
+        p {
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+        
+        code {
+            background-color: #f8f9fa;
+            padding: 3px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <h2>API Endpoints</h2>
+    <div class="container">
+        <h4>1. /create-customer</h4>
+        <p>HTTP method: <code>POST</code></p>
+        <p>Payload:
+            <pre>
+{
+    "phone_number": "1234567890",
+    "name": "Your name",
+    "city": "Your city"
+}
+            </pre>
+        </p>
+        
+        <h4>2. /create-order</h4>
+        <p>HTTP method: <code>POST</code></p>
+        <p>Payload:
+            <pre>
+{
+    "item_name": "Item's Name",
+    "customer_phone": "1234567890"
+}  
+            </pre>
+        </p>
+        
+        <h4>3. /update-order-status</h4>
+        <p>HTTP method: <code>PATCH</code></p>
+        <p>Payload:
+            <pre>
+{
+    "order_id": 1,
+    "new_status": "Delivered"
+}
+            </pre>
+        </p>
+        
+        <h4>4. /fetch-orders-by-city</h4>
+        <p>HTTP method: <code>GET</code></p>
+        <p>Parameter: <code>/fetch-orders-by-city?city=Delhi</code></p>
+    </div>
+</body>
+</html>
